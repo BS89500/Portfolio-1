@@ -18,6 +18,8 @@ int main() {
   std::cout << "Press Q to exit the game." << std::endl;
   std::cout << "Use W,A,S,D to move your character around" << std::endl;
   std::cout << "Press 'C' to plant a carrot." << std::endl;
+  std::cout << "Press 'V' to harvest a carrot." << std::endl;
+  std::cout << "Press 'e' to pass the day." << std::endl;
   std::cout << "Days Passed: " << dayCounter << std::endl ;
   while(game_in_progress) {
     //ansi_clear(); broken
