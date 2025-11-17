@@ -11,5 +11,18 @@ std::string Carrot::symbol() {
   return "W";
 }
 void Carrot::end_day() {
-  age += 1;
+  if (watered == true) {
+    age += 2;
+  }else
+  {
+    age += 1;
+  }
 }
+void Carrot:: water() {
+  watered = true;
+}
+
+int Carrot::get_age() {
+  return age;
+}
+
