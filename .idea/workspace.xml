@@ -36,16 +36,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38352575-7162-4efa-a29e-a6a82868527e" name="Changes" comment="Porfolio 2 Init">
-      <change afterPath="$PROJECT_DIR$/src/beet.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/beet.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/brussel_sprouts.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/brussel_sprouts.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/spinach.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/spinach.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/farm.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/farm.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="38352575-7162-4efa-a29e-a6a82868527e" name="Changes" comment="Porfolio 2 1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -181,7 +172,7 @@
       <workItem from="1761073636590" duration="3531000" />
       <workItem from="1761498173467" duration="18458000" />
       <workItem from="1762891741107" duration="4205000" />
-      <workItem from="1763407594064" duration="1183000" />
+      <workItem from="1763407594064" duration="1995000" />
     </task>
     <task id="LOCAL-00001" summary="movement updates">
       <option name="closed" value="true" />
@@ -223,7 +214,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763345103758</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Porfolio 2 1">
+      <option name="closed" value="true" />
+      <created>1763409526290</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1763409526295</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,6 +239,7 @@
     <MESSAGE value="Porfolio final push 2" />
     <MESSAGE value="Porfolio final push 3" />
     <MESSAGE value="Porfolio 2 Init" />
-    <option name="LAST_COMMIT_MESSAGE" value="Porfolio 2 Init" />
+    <MESSAGE value="Porfolio 2 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Porfolio 2 1" />
   </component>
 </project>

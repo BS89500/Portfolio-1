@@ -46,7 +46,7 @@ void Farm::harvest(int row, int column) {
 }
 bool Farm::isHarvestable(int row, int column) {
   Plot *current_plot = plots.at(row).at(column);
-  if (current_plot->symbol() == "V" || current_plot->symbol() == "W" || current_plot->symbol("P")) {
+  if (current_plot->symbol() == "V" || current_plot->symbol() == "W" || current_plot->symbol() == "P") {
     return true;
   }
   return false;
