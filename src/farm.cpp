@@ -39,6 +39,7 @@ void Farm::plant(int row, int column, Plot *plot) {
   }
 
 }
+
 void Farm::harvest(int row, int column) {
   Plot *current_plot = plots.at(row).at(column);
   plots.at(row).at(column) = new Soil();
@@ -46,7 +47,8 @@ void Farm::harvest(int row, int column) {
 }
 bool Farm::isHarvestable(int row, int column) {
   Plot *current_plot = plots.at(row).at(column);
-  if (current_plot->symbol() == "V" || current_plot->symbol() == "W" || current_plot->symbol() == "P") {
+  if (current_plot->symbol() == "V" || current_plot->symbol() == "W" || current_plot->symbol() == "B"
+   || current_plot->symbol() == "O" || current_plot->symbol() == "L" || current_plot->symbol() == "S") {
     return true;
   }
   return false;
@@ -58,4 +60,9 @@ void Farm::end_day() {
       plots.at(i).at(j)->end_day();
     }
   }
+}
+
+void Farm::water(int row, int column) {
+  Plot *current_plot = plots.at(row).at(column);
+  current_plot->water();
 }

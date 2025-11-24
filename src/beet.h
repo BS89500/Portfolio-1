@@ -12,5 +12,5 @@ public:
     std::string symbol() override;
     void end_day() override;
     int get_age();
-    void water();
+    void water() override;
 };

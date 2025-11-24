@@ -6,3 +6,6 @@ std::string Soil::symbol() {
 void Soil::end_day() {
   //no-op
 }
+void Soil::water() {
+  //no -op
+}

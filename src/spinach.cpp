@@ -4,17 +4,19 @@
 
 std::string Spinach::symbol() {
     if (age == 0) {
-        return "v";
-    } else if (age == 1){
-        return "V";
+        return "~";
+    } else if (age == 2){
+        return "s";
+    }
+    else if (age == 7){
+        return "S";
     }
     return "W";
 }
 void Spinach::end_day() {
     if (watered == true) {
         age += 2;
-    }else
-    {
+    } else{
         age += 1;
     }
 }

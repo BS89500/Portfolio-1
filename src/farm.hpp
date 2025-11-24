@@ -22,4 +22,5 @@ class Farm {
     void harvest(int row, int column);
     bool isHarvestable(int row, int column);
     void end_day();
+    void water(int row, int column);
 };

@@ -4,9 +4,11 @@
 
 std::string BrusselSprouts::symbol() {
     if (age == 0) {
-        return "v";
-    } else if (age == 1){
-        return "V";
+        return "~";
+    } else if (age == 5){
+        return "o";
+    } else if (age == 15) {
+        return "O";
     }
     return "W";
 }

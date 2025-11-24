@@ -36,7 +36,24 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38352575-7162-4efa-a29e-a6a82868527e" name="Changes" comment="Porfolio 2 1" />
+    <list default="true" id="38352575-7162-4efa-a29e-a6a82868527e" name="Changes" comment="Porfolio 2 1 fix">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/beet.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/beet.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/beet.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/beet.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/brussel_sprouts.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/brussel_sprouts.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/brussel_sprouts.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/brussel_sprouts.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/carrot.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrot.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/carrot.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrot.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/farm.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/farm.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/farm.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/farm.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plot.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/plot.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/soil.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/soil.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/soil.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/soil.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/spinach.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/spinach.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/spinach.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/spinach.h" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,7 +119,12 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Catch.player_test">
+  <component name="RunManager" selected="CMake Application.main">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="carrot_test" type="CMakeCatchTestRunConfigurationType" factoryName="Catch Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Farming Simulator" TARGET_NAME="carrot_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Farming Simulator" RUN_TARGET_NAME="carrot_test" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -173,6 +195,9 @@
       <workItem from="1761498173467" duration="18458000" />
       <workItem from="1762891741107" duration="4205000" />
       <workItem from="1763407594064" duration="1995000" />
+      <workItem from="1763497872616" duration="921000" />
+      <workItem from="1763587644444" duration="1655000" />
+      <workItem from="1763661858736" duration="13656000" />
     </task>
     <task id="LOCAL-00001" summary="movement updates">
       <option name="closed" value="true" />
@@ -222,7 +247,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763409526295</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Porfolio 2 1 fix">
+      <option name="closed" value="true" />
+      <created>1763497949458</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1763497949458</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,6 +273,7 @@
     <MESSAGE value="Porfolio final push 3" />
     <MESSAGE value="Porfolio 2 Init" />
     <MESSAGE value="Porfolio 2 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Porfolio 2 1" />
+    <MESSAGE value="Porfolio 2 1 fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Porfolio 2 1 fix" />
   </component>
 </project>
