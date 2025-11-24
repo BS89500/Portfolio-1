@@ -3,11 +3,11 @@
 #include "brussel_sprouts.h"
 
 std::string BrusselSprouts::symbol() {
-    if (age == 0) {
+    if (age >= 0 && age <5) {
         return "~";
-    } else if (age == 5){
+    } else if (age >= 5 && age < 15){
         return "o";
-    } else if (age == 15) {
+    } else if (age >= 15) {
         return "O";
     }
     return "W";
