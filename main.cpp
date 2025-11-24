@@ -28,7 +28,8 @@ int main() {
   std::cout << "Press 'N' to plant lettuce." << std::endl;
   std::cout << "Press 'M' to plant spinach." << std::endl;
   std::cout << "Press 'V' to harvest a grown plant." << std::endl;
-  std::cout << "Press 'e' to pass the day." << std::endl;
+  std::cout << "Press 'E' to pass the day." << std::endl;
+  std::cout << "Press 'Z' to water plants." << std::endl;
   std::cout << "Days Passed: " << dayCounter << std::endl ;
 
   while(game_in_progress) {
