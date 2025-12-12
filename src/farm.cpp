@@ -37,7 +37,7 @@ int Farm::number_of_columns() {
 
 std::string Farm::get_symbol(int row, int column) {
   if (bunny != nullptr && bunny->row() == row && bunny->column() == column) {
-    return "B";
+    return "Y";
   }
   if(player->row() == row && player->column() == column) {
     return "@";
@@ -80,10 +80,13 @@ void Farm::end_day() {
   if (bunny != nullptr) {
     int random = rand() % 10 + 1;
     if (bunnySpawned == true) {
-      if (bunny->column() + 1 == player->column() && bunny->row() == player->row()) {
-        bunny->set_column(bunny->column() - 3);
-      }else {
-        bunnyMove();
+      if (bunny->column() + 1 == player->column() && bunny->row() == player->row()){
+        bunnyMove(-3);
+      }else if ((bunny->column() + 1 == player->column() && bunny->row() + 1 == player->row()) ||
+        (bunny->column() + 1 == player->column() && bunny->row() - 1 == player->row())){
+        bunnyMove(3);
+      }else{
+        bunnyMove(1);
       }
     }
     if (random > 5 && bunnySpawned == false) {
@@ -102,17 +105,23 @@ void Farm::spawnBunnies() {
     else {
       bunny->set_row(randRow);
     }
-    if (isHarvestable(bunny->row(), bunny->column())) {
-      harvest(bunny->row(), bunny->column());
-    }
+    harvest(bunny->row(), bunny->column());
+
   }
 
 }
 
-void Farm::bunnyMove() {
+void Farm::bunnyMove(int move) {
   if (bunny != nullptr) {
-    bunny->move_right();
-    if (bunny->column() >= 0 && bunny->column() <= number_of_columns() - 1 && isHarvestable(bunny->row(), bunny->column())) {
+    for (int i = 0; i < abs(move); i++) {
+      if (move > 0) {
+        bunny->move_right();
+      }
+      else {
+        bunny->move_left();
+      }
+    }
+    if (bunny->column() >= 0 && bunny->column() <= number_of_columns() - 1) {
       harvest(bunny->row(), bunny->column());
     }
     if (bunny->column() > number_of_columns() - 1 || bunny->column() < 0) {

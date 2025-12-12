@@ -26,5 +26,5 @@ class Farm {
     void end_day();
     void water(int row, int column);
     void spawnBunnies();
-    void bunnyMove();
+    void bunnyMove(int move);
 };
