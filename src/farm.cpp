@@ -4,7 +4,7 @@
 #include "farm.hpp"
 #include "soil.hpp"
 
-Farm::Farm(int rows, int columns, Player *player) : rows(rows), columns(columns), player(player) {
+Farm::Farm(int rows, int columns, Player *player) : rows(rows), columns(columns), player(player), bunny(nullptr) {
   for(int i = 0; i < rows; i++) {
     std::vector<Plot *> row;
     for(int j = 0; j < columns; j++) {
@@ -15,6 +15,18 @@ Farm::Farm(int rows, int columns, Player *player) : rows(rows), columns(columns)
   }
 }
 
+Farm::Farm(int rows, int columns, Player *player, Bunny *bunny_): rows(rows), columns(columns), player(player), bunny(bunny_){
+  for(int i = 0; i < rows; i++) {
+    std::vector<Plot *> row;
+    for(int j = 0; j < columns; j++) {
+      Soil *soil = new Soil();
+      row.push_back(soil);
+    }
+    plots.push_back(row);
+  }
+}
+
+
 int Farm::number_of_rows() {
   return rows;
 }
@@ -24,11 +36,16 @@ int Farm::number_of_columns() {
 }
 
 std::string Farm::get_symbol(int row, int column) {
+  if (bunny != nullptr && bunny->row() == row && bunny->column() == column) {
+    return "B";
+  }
   if(player->row() == row && player->column() == column) {
     return "@";
-  } else {
+  }
+  else {
     return plots.at(row).at(column)->symbol();
   }
+
 }
 
 void Farm::plant(int row, int column, Plot *plot) {
@@ -60,6 +77,50 @@ void Farm::end_day() {
       plots.at(i).at(j)->end_day();
     }
   }
+  if (bunny != nullptr) {
+    int random = rand() % 10 + 1;
+    if (bunnySpawned == true) {
+      if (bunny->column() + 1 == player->column() && bunny->row() == player->row()) {
+        bunny->set_column(bunny->column() - 3);
+      }else {
+        bunnyMove();
+      }
+    }
+    if (random > 5 && bunnySpawned == false) {
+      spawnBunnies();
+    }
+  }
+}
+
+void Farm::spawnBunnies() {
+  if (bunny != nullptr) {
+    int randRow = rand() % rows;
+    bunnySpawned = true;
+    if (bunny->column() == player->column() && player->row() == randRow) {
+      bunny->set_row(randRow - 1);
+    }
+    else {
+      bunny->set_row(randRow);
+    }
+    if (isHarvestable(bunny->row(), bunny->column())) {
+      harvest(bunny->row(), bunny->column());
+    }
+  }
+
+}
+
+void Farm::bunnyMove() {
+  if (bunny != nullptr) {
+    bunny->move_right();
+    if (bunny->column() >= 0 && bunny->column() <= number_of_columns() - 1 && isHarvestable(bunny->row(), bunny->column())) {
+      harvest(bunny->row(), bunny->column());
+    }
+    if (bunny->column() > number_of_columns() - 1 || bunny->column() < 0) {
+      bunnySpawned = false;
+      bunny->reset();
+    }
+  }
+
 }
 
 void Farm::water(int row, int column) {

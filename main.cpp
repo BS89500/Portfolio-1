@@ -9,13 +9,14 @@
 #include "src/spinach.h"
 #include "src/brussel_sprouts.h"
 #include "src/beet.h"
-
+#include "src/bunny.h"
 
 
 //test
 int main() {
   Player player;
-  Farm farm(8, 8, &player);
+  Bunny bunny;
+  Farm farm(8, 8, &player, &bunny);
   FarmPrinter printer(&farm);
   bool game_in_progress = true;
   std::string player_input;
@@ -40,12 +41,16 @@ int main() {
     if(player_input == "q") {
       game_in_progress = false;
     } else if(player_input == "d" && player.column() < farm.number_of_columns() - 1) {
+      bunny.playerCheck(player.row(), player.column());
       player.move_right();
     } else if(player_input == "s" && player.row() < farm.number_of_rows() - 1) {
+      bunny.playerCheck(player.row(), player.column());
       player.move_down();
     } else if(player_input == "w" && player.row() > 0) {
+      bunny.playerCheck(player.row(), player.column());
       player.move_up();
     } else if(player_input == "a" && player.column() > 0) {
+      bunny.playerCheck(player.row(), player.column());
       player.move_left();
     }
 
